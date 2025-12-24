@@ -1,5 +1,7 @@
 # TinyAlphaZero
 
+### UNDER DEVELOPMENT
+
 Minimal AlphaZero-style chess engine with supervised Phase 1 training and self-play Phase 2.
 
 ## Quick Start
