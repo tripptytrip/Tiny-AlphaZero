@@ -1,0 +1,28 @@
+data:
+  format: "memmap"  # "memmap" or "json"
+  data_dir: data/phase1
+  json_path: data/sample_games.json
+  val_split: 0.1
+  num_workers: 2
+  seed: 42
+
+model:
+  vocab_size: 23
+  num_moves: 4096
+  num_value_classes: 3
+  d_model: 256
+  n_layers: 6
+  n_heads: 8
+  dropout: 0.1
+  position_encoding: "factored"
+
+training:
+  batch_size: 512
+  epochs: 50
+  learning_rate: 1.0e-3
+  weight_decay: 0.01
+  grad_clip: 1.0
+  policy_weight: 1.0
+  value_weight: 2.0
+  save_every: 5
+  checkpoint_dir: checkpoints/phase1

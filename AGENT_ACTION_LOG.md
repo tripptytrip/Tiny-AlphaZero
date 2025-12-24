@@ -1,0 +1,24 @@
+# Agent Action Log
+
+- 2025-09-28: Initialized project skeleton (`pyproject.toml`, `src/`, `tests/`, `scripts/`, `data/`).
+- 2025-09-28: Implemented board/move encoding and legal move masking in `src/data/encoding.py`.
+- 2025-09-28: Implemented random/biased game generation in `src/data/generation.py` and sample data script `scripts/generate_data.py`.
+- 2025-09-28: Added encoding tests in `tests/test_encoding.py` and test path bootstrap in `tests/conftest.py`.
+- 2025-09-28: Implemented model components in `src/model/` and GPU shape test in `tests/test_model.py`.
+- 2025-09-28: Added Phase 1 dataset utilities and training loop in `src/data/dataset.py` and `src/training/phase1.py`.
+- 2025-09-28: Added Phase 1 config at `config/phase1.yaml`.
+- 2025-09-28: Implemented pure Python MCTS in `src/mcts/` and added mate-in-1 test in `tests/test_mcts.py`.
+- 2025-09-28: Added self-play generation loop and anti-collapse controls in `src/data/generation.py`, plus replay buffer in `src/training/phase2.py` and self-play script `scripts/generate_self_play.py`.
+- 2025-09-28: Added device selection and CPU fallback for self-play generation in `scripts/generate_self_play.py`.
+- 2025-09-28: Added progress logging option for self-play generation in `src/data/generation.py` and `scripts/generate_self_play.py`.
+- 2025-09-28: Implemented Phase 2 training iteration, evaluation, Elo, and checkpoint pool in `src/training/phase2.py` and `src/training/evaluation.py`.
+- 2025-09-28: Added progress flag passthrough to Phase 2 iteration in `src/training/phase2.py`.
+- 2025-09-28: Decoupled self-play generation from MCTS imports and added JSON-to-memmap conversion script `scripts/convert_to_memmap.py`.
+- 2025-09-28: Updated model encoding/transformer, added benchmarks runner, and added Gradio visual dashboard with updated tests.
+- 2025-09-28: Added Phase 1 trainer class, training script, and validation metrics with smoke test run.
+- 2025-09-28: Updated MCTS node/state storage and mate-in-one test case to align with current engine spec.
+- 2025-09-28: Implemented Phase 2 replay buffer, trainer loop, and CLI entrypoint with smoke test run.
+- 2025-09-28: Added parallel self-play worker, Arena evaluation, and Phase 2 smoke test with sequential fallback.
+- 2025-09-28: Added batched MCTS implementation and thread fallback, with batched self-play smoke test run.
+- 2025-09-28: Added throughput logging, pipeline script, and README documentation.
+- 2025-09-28: Added Dirichlet noise support to MCTS and batched MCTS with unit tests.
